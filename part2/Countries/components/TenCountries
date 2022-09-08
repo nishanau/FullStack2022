@@ -1,0 +1,27 @@
+
+
+const TenCountries = (props) => {
+
+    const showHandler = (e) => {
+    
+        var selectedCountry = []
+
+        for (let i = 0; i < props.search.length; i++) {
+
+            if (e.target.value === props.search[i].id) {
+            selectedCountry = selectedCountry.concat(props.search[i])
+           
+            }
+        }
+        return props.showCountryDetails(selectedCountry)
+    }
+    
+  
+
+    return (
+
+        props.search.map(country => <div key={country.name.official}>{country.name.common} <button value={country.name.official} onClick={showHandler} > Show </button> </div>)
+    )
+}
+
+export default TenCountries
