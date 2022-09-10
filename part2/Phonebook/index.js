@@ -1,7 +1,5 @@
 import ReactDOM from 'react-dom/client'
-//import App from './Phonebook'
-import App from './Phonebook'
-//import App from './App'
+import App from './App'
 
 
 
